@@ -4,24 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Webpage</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        footer {
+            margin-top: 50px;
+            color: #999;
+        }
+        @keyframes example {
+            from {background-color: red;}
+            to {background-color: yellow;}
+        }
+        .animated-div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: example;
+            animation-duration: 4s;
+            margin: 20px auto;
+        }
+        @media (max-width: 600px) {
+            body {
+                background-color: #fff;
+            }
         }
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <h1>Welcome to My Webpage!</h1>
     <p>This is a simple webpage hosted for free.</p>
+    <button class="btn btn-primary" onclick="showAlert()">Click Me</button>
+    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+    <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Submit">
+    </form>
+    <div class="animated-div"></div>
+    <footer>
+        <p>© 2024 My Webpage</p>
+    </footer>
+    <script>
+        function showAlert() {
+            alert('Hello, World!');
+        }
+    </script>
 </body>
-<nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
 </html>
